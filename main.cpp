@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
             string token = tokens[i];
             if (token.substr(0, 2) == "c=")
             {
-                caseSensitive = (token.substr(2) == "s");
+                caseSensitive = (token.substr(2) == "i" ? false : true);
             }
             else if (token.substr(0, 2) == "m=")
             {
