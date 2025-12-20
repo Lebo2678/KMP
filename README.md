@@ -26,7 +26,7 @@ A fast, interactive command-line text search and replace tool built in C++.
 
    ```
 
-   g++ main.cpp -o textsearch
+   g++ main.cpp TextSearch.cpp utils.cpp -o textsearch
 
    ```
 
