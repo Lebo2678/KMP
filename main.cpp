@@ -88,17 +88,7 @@ int main(int argc, char *argv[])
             }
         }
 
-        // 5. Execute Search
-        if (!outputPath.empty())
-        {
-            engine.search(keyword, outputPath, caseSensitive, matchMode);
-        }
-        else
-        {
-            engine.search(keyword, caseSensitive, matchMode);
-        }
-
-        // 6. Execute Replace (If requested)
+        // 5. Execute Replace (If requested)
         if (!replaceTarget.empty())
         {
             if (outputPath.empty())
@@ -109,6 +99,17 @@ int main(int argc, char *argv[])
             {
                 engine.replace(keyword, replaceTarget, outputPath, caseSensitive, matchMode);
             }
+            continue;
+        }
+
+        // 6. Execute Search
+        if (!outputPath.empty())
+        {
+            engine.search(keyword, outputPath, caseSensitive, matchMode);
+        }
+        else
+        {
+            engine.search(keyword, caseSensitive, matchMode);
         }
     }
 
